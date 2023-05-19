@@ -1,0 +1,90 @@
+*{    margin: 0;    padding: 0;    transition: .2s ease-in-out;}
+@font-face {    font-family:Tanha ;    src: url(fonts/eot/Tanha-FD.eot),
+    url(fonts/ttf/Tanha-FD.eot),    url(fonts/woff/Tanha-FD.woff),
+    url(fonts/woff2/Tanha-FD.woff2);
+}
+@font-face {    font-family:Vazir ;    src: url(fonts/eot/Vazir-Bold.eot),
+    url(fonts/ttf/Vazir-Bold.ttf),    url(fonts/woff/Vazir-Bold.woff),
+    url(fonts/woff2/Vazir-Bold.woff2);
+}
+:root{    --font-primatry:Tanha;    --font-secondary:Vazir;    --color-primary:#992b82;
+    --color-primary-dark:#6e1e5d;    --color-black:#000;    --color-white:#fff;
+}
+body{    width: 100%;    font-family: var(--font-secondary);}
+header{ height: 70px;   display: flex;  justify-content: space-between;}
+header nav{    display: flex;    align-items: center;}
+header nav .logo{    width: 150px;    margin-left: 100px;}
+header nav .logo img{    width: 100%;}
+header nav ul{    display: flex;    justify-content: space-around;    list-style: none;}
+header nav ul li{    margin-left: 80px;    font-family: var(--font-primatry);
+    padding: 5px 10px;    position: relative;
+}
+header nav ul li::after{
+    content: '';    position: absolute;    width:0px ;    height: 1.5px;    right: 0;
+    bottom: 0;    background-color: var(--color-primary);    transition: .5s ease-in-out;
+}
+header nav ul li:hover::after{    width: 100%;}
+header nav ul li a{    color: black;    text-decoration: none;}
+header .button{    display: flex;    justify-content: space-around;    align-items: center;}
+header .button button{    background-color: transparent;    border: 0;    margin-right: 20px;
+    height: 100%;    width: 60px;
+}
+header .button button i{    font-size: 12pt;}
+header .button button:hover{    cursor: pointer;}
+header .button button:hover i{    font-size: 16pt;    font-weight: bold;}
+header .button .buy{    background-color: var(--color-primary);    color: white;}
+main{    width: 100%;}
+.LandingPage{    width: 100%;    height: calc(100vh - 70px);    display: flex;
+    justify-content: space-between;    align-items: center;
+}
+.LandingPage .img-content{    display: flex;    flex-direction: column;    height: 100%;
+    position: relative;    width: 35%;    overflow: hidden;
+}
+.LandingPage .img-content img{    max-width: 100%;    height: 100%;    position: absolute;}
+.LandingPage .img-content .detail{    background-color: var(--color-primary);    color: #fff;
+    position: absolute;    bottom: 18px;    left: calc(50% - 187px);    display: flex;
+    align-items: center;    padding: 10px;    width: 60%;
+}
+.LandingPage .img-content .detail .Next{    padding: 0 0 0 15px;}
+.LandingPage .img-content .detail .number{    font-size: 24pt;    align-self: flex-start;}
+.LandingPage .img-content .detail .text h3{    font-size: 18pt;}
+.LandingPage .img-content .detail .text p{    font-size: 9pt;}
+.LandingPage .content{    display: flex;    flex-direction: column;
+    justify-content: space-around;    height: 100%;    width: 45%;
+}
+.LandingPage .content .botom{    width: 100%;    display: flex;    justify-content: space-around;
+}
+.LandingPage .content .botom .text{    width: 45%;}
+.LandingPage .content .botom .text h4{    font-size: 12pt;    margin-bottom: 10px;
+    position: relative;
+}
+.LandingPage .content .botom .text h4::before{    content: '';    position: absolute;
+    width: 50px;    height: 2px;    background-color: #000;    left: 0;    top: 50%;
+}
+.LandingPage .content .botom .text p{    font-size: 9pt;    text-align: justify;
+    color: grey;    line-height: 2;
+}
+.LandingPage .content .top{    position: relative;}
+.LandingPage .content .top h1{    font-size: 38pt;    color: var(--color-primary);}
+.LandingPage .content .top h2{    position: absolute;    right: 200px;    font-family: Tanha;}
+.LandingPage .content .top .text{    margin-top: 70px;}
+.LandingPage .content .top .text p{    font-size: 9pt;    line-height: 2;
+    color: rgb(37, 37, 37);
+}
+.LandingPage .content .top .text button{    position: absolute;    left: 0;
+    background-color: var(--color-primary);    padding: 10px 20px;
+    margin-top: 20px;    border: 0;    color: #fff;    font-weight: bold;
+}
+.LandingPage .content .top .text button:hover{    cursor: pointer;
+    background-color:var(--color-primary-dark) ;
+}
+.LandingPage .social{    display: flex;    flex-direction: column;    margin:0 30px;
+    align-self: flex-end;    margin-bottom: 62px;
+}
+.LandingPage .social i{    margin-bottom: 40px;}
+.LandingPage .social .mouse-container{    margin-bottom: 0px;    position: relative;}
+.LandingPage .social .mouse-container i{    color: rgba(0, 0, 0, .3);}
+.LandingPage .social .mouse-container::after{    content: '';    width: 2px;    height: 100px;
+    background-color: rgba(0, 0, 0, .3);    position: absolute;    right: 29%;    top: 20px;
+}
+
